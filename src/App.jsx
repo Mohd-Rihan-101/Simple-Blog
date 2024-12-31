@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import BlogForm from './components/BlogForm';
+import BlogList from './components/BlogList';
 
 function App() {
   const [blogs, setBlogs] = useState([]);
@@ -16,6 +17,8 @@ function App() {
     <div>
       <h1>Simple Blog</h1>
       <BlogForm  addBlog={addBlog}/>
+      <BlogList  blogs={blogs} deleteBlog={deleteBlog}/>
+
     </div>
   )
 }
