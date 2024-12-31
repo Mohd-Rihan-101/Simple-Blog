@@ -6,8 +6,8 @@ function BlogForm({ addBlog }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if ((title, content)) {
-      addBlog(title, content);
+    if (title && content) {
+      addBlog({title, content});
       setTitle("");
       setContent("");
     }
